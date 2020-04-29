@@ -54,7 +54,7 @@ class Display:
 
         max_count = max([node.get_hit_count() for _, node in self.gsom_node_map.items()])
         listed_color_map = Display._get_color_map(max_count, alpha=0.9)
-        listed_color = ("red","green","blue")
+        listed_color = ("red","green","blue","yellow","orange","violet","black","maroon","pink","indigo")
         for key, value in self.gsom_node_map.items():
 
             key_split = key.split(':')
