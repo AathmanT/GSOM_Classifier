@@ -126,6 +126,30 @@ y_train = np.load('data/casme_trainlabel1.npy')
 X_test = np.load('data/casme_test1.npy')
 y_test = np.load('data/casme_testlabel1.npy')
 
+
+X_train1 = np.load('/content/features1/baum_train1.npy')
+y_train1 = np.load('/content/features1/baum_label1.npy')
+X_train2 = np.load('/content/features1/baum_train2.npy')
+y_train2 = np.load('/content/features1/baum_label2.npy')
+
+print(X_train1.shape)
+print(X_train2.shape)
+print(y_train1.shape)
+print(y_train2.shape)
+
+# X_train = np.load('data/casme_test1.npy')
+# y_train = np.load('data/casme_testlabel1.npy')
+X_train = np.vstack((X_train1,X_train2))
+y_train = np.hstack((y_train1,y_train2))
+print(X_train.shape)
+print(y_train.shape)
+
+
+X_test = np.load('/content/features1/baum_test.npy')
+y_test = np.load('/content/features1/baumt_label.npy')
+
+
+
 scaler = MinMaxScaler()
 X_train = scaler.fit_transform(X_train)
 
